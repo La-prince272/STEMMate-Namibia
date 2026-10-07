@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Facilitator - STEMMate Namibia</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<a href="#main" class="skip-link">Skip to main content</a>
+
+<header class="heading">
+    <h1>STEMMate Namibia - Facilitator</h1>
+</header>
+
+<!-- connection banner (updates with JavaScript) -->
+<div class="conn-banner conn-banner--offline" role="status">
+    <span>You are offline.</span>
+</div>
+
+<main id="main">
+
+    <!-- dashboard numbers -->
+    <div class="dashboard">
+        <div class="tile">
+            <p class="num">4</p>
+            <p class="lbl">Saved Activities</p>
+            <p class="sub">Available offline</p>
+        </div>
+        <div class="tile">
+            <p class="num">3</p>
+            <p class="lbl">Session Plans</p>
+            <p class="sub">Plans created</p>
+        </div>
+        <div class="tile">
+            <p class="num">2</p>
+            <p class="lbl">Pending Sync</p>
+            <p class="sub">Waiting for connectivity</p>
+        </div>
+    </div>
+
+    <div class="container">
+
+        <!-- create a session plan -->
+        <div class="session-creation">
+            <h2>Create a session plan</h2>
+
+            <form>
+                <div class="form-grid">
+                    <div class="field">
+                        <label for="sessionName">Session name</label>
+                        <input type="text" id="sessionName" placeholder="e.g. Rocket launcher - Grade 8" required>
+                    </div>
+
+                    <div class="field">
+                        <label for="sessionDate">Session date</label>
+                        <input type="date" id="sessionDate" required>
+                    </div>
+
+                    <div class="field">
+                        <label for="sessionTime">Duration</label>
+                        <select id="sessionTime" required>
+                            <option value="">Choose</option>
+                            <option>10 minutes</option>
+                            <option>20 minutes</option>
+                            <option>30 minutes</option>
+                            <option>40 minutes</option>
+                            <option>50 minutes</option>
+                            <option>60 minutes</option>
+                        </select>
+                    </div>
+
+                    <div class="field">
+                        <label for="sessionTopic">Topic</label>
+                        <select id="sessionTopic" required>
+                            <option value="">Choose</option>
+                            <option>Science</option>
+                            <option>Technology</option>
+                            <option>Engineering</option>
+                            <option>Mathematics</option>
+                        </select>
+                    </div>
+
+                    <div class="field full-width">
+                        <label for="sessionSteps">Session steps and timing</label>
+                        <textarea id="sessionSteps" rows="6" placeholder="Write the steps here"></textarea>
+                    </div>
+
+                    <div class="field">
+                        <label for="sessionMaterials">Materials required</label>
+                        <textarea id="sessionMaterials" rows="6" placeholder="List materials"></textarea>
+                    </div>
+
+                    <div class="field">
+                        <label for="sessionSafetyNotes">Safety notes</label>
+                        <textarea id="sessionSafetyNotes" rows="6" placeholder="Safety instructions"></textarea>
+                    </div>
+
+                    <div class="field full-width">
+                        <label for="inclusionPrompts">Inclusion prompts</label>
+                        <textarea id="inclusionPrompts" rows="4" placeholder="Inclusion prompts"></textarea>
+                    </div>
+                </div>
+
+                <div class="form-actions">
+                    <button type="submit" class="btn btn-primary">Save and queue sync</button>
+                    <button type="button" class="btn">Save draft</button>
+                    <button type="reset" class="btn">Cancel</button>
+                </div>
+
+                <p class="hint">Status: <span class="pill pill--warn">Will sync when online</span></p>
+            </form>
+        </div>
+
+        <!-- filter activities -->
+        <div class="activity-filtering">
+            <h2>Filter activities</h2>
+
+            <div class="filter-grid">
+                <div class="field">
+                    <label for="level">Level</label>
+                    <select id="level">
+                        <option>Any level</option>
+                        <option>Primary</option>
+                        <option>Junior secondary</option>
+                        <option>Senior secondary</option>
+                    </select>
+                </div>
+
+                <div class="field">
+                    <label for="topic">Topic</label>
+                    <select id="topic">
+                        <option>Any topic</option>
+                        <option>Science</option>
+                        <option>Technology</option>
+                        <option>Engineering</option>
+                        <option>Mathematics</option>
+                    </select>
+                </div>
+
+                <div class="field">
+                    <label for="time-availability">Duration</label>
+                    <select id="time-availability">
+                        <option>Any duration</option>
+                        <option>10 min</option>
+                        <option>20 min</option>
+                        <option>30 min</option>
+                        <option>45 min</option>
+                        <option>60 min</option>
+                    </select>
+                </div>
+
+                <div class="field">
+                    <label for="materials-used">Materials</label>
+                    <select id="materials-used">
+                        <option>Any material</option>
+                        <option>plastic bottles</option>
+                        <option>cardboard</option>
+                        <option>batteries</option>
+                        <option>wire</option>
+                        <option>tape</option>
+                        <option>rulers</option>
+                        <option>paper</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-actions">
+                <button type="button" class="btn btn-primary">Apply filters</button>
+                <button type="reset" class="btn">Reset</button>
+            </div>
+
+            <p class="hint">Showing <b>3</b> activities</p>
+
+            <div class="activity-list">
+
+                <div class="activity-card">
+                    <h3>Rocket launcher</h3>
+                    <p class="meta">Junior secondary - Science - 45 min</p>
+                    <p class="meta">Materials: plastic bottles, cardboard, tape</p>
+                    <p><span class="pill pill--ok">Saved offline</span></p>
+                    <div class="actions">
+                        <button type="button" class="btn">Save offline</button>
+                        <button type="button" class="btn btn-primary">Plan this activity</button>
+                    </div>
+                </div>
+
+                <div class="activity-card">
+                    <h3>Simple circuit torch</h3>
+                    <p class="meta">Senior secondary - Science - 30 min</p>
+                    <p class="meta">Materials: batteries, cardboard, wire</p>
+                    <p><span class="pill pill--draft">Not downloaded</span></p>
+                    <div class="actions">
+                        <button type="button" class="btn">Save offline</button>
+                        <button type="button" class="btn btn-primary">Plan this activity</button>
+                    </div>
+                </div>
+
+                <div class="activity-card">
+                    <h3>Paper bridge strength</h3>
+                    <p class="meta">Primary - Engineering - 20 min</p>
+                    <p class="meta">Materials: cardboard, rulers, tape</p>
+                    <p><span class="pill pill--draft">Not downloaded</span></p>
+                    <div class="actions">
+                        <button type="button" class="btn">Save offline</button>
+                        <button type="button" class="btn btn-primary">Plan this activity</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- session plans -->
+        <div class="modify-delete">
+            <h2>Your session plans</h2>
+
+            <div class="plan-row">
+                <div>
+                    <p class="title">Java for Beginners</p>
+                    <p class="meta">10 Oct 2026 - 60 minutes</p>
+                </div>
+                <div><span class="pill pill--ok">Synced</span></div>
+                <div class="actions">
+                    <button type="button" class="btn">Modify</button>
+                    <button type="button" class="btn btn-danger">Delete</button>
+                </div>
+            </div>
+
+            <div class="plan-row">
+                <div>
+                    <p class="title">Water filtration model</p>
+                    <p class="meta">27 Oct 2026 - 45 minutes</p>
+                </div>
+                <div><span class="pill pill--warn">Pending sync</span></div>
+                <div class="actions">
+                    <button type="button" class="btn">Modify</button>
+                    <button type="button" class="btn btn-danger">Delete</button>
+                </div>
+            </div>
+
+            <div class="plan-row">
+                <div>
+                    <p class="title">Volcano eruptions</p>
+                    <p class="meta">07 Nov 2026 - 60 minutes</p>
+                </div>
+                <div><span class="pill pill--draft">Draft</span></div>
+                <div class="actions">
+                    <button type="button" class="btn">Continue</button>
+                    <button type="button" class="btn btn-danger">Delete</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- sync queue -->
+        <div class="sync-queue" id="sync-queue">
+            <h2>Sync queue</h2>
+            <p class="hint">These will sync when you have internet.</p>
+
+            <div class="sync-list">
+                <!-- filled in by app.js -->
+            </div>
+
+            <div class="form-actions">
+                <button type="button" class="btn btn-primary" data-sync-all>Sync all now</button>
+            </div>
+        </div>
+
+    </div>
+</main>
+
+<footer class="site-footer">
+    <p>&copy; 2026 STEMMate Namibia</p>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>

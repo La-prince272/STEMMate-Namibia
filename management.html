@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Management - STEMMate Namibia</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<a href="#main" class="skip-link">Skip to main content</a>
+
+<header class="heading">
+    <h1>STEMMate Namibia - School Management</h1>
+</header>
+
+<div class="conn-banner conn-banner--offline" role="status">
+    <span>You are offline. Showing plans saved before the last connection.</span>
+</div>
+
+<main id="main">
+
+    <div class="access-notice">
+        <h2>Read-only plan review</h2>
+        <p>This shows plans at your school. Learners are never listed.</p>
+    </div>
+
+    <!-- filters -->
+    <div class="card">
+        <h2>Find a plan</h2>
+
+        <div class="kit-filter-grid">
+            <div class="field">
+                <label for="m-date">Date</label>
+                <input type="date" id="m-date" value="2026-10-10">
+            </div>
+            <div class="field">
+                <label for="m-level">Level</label>
+                <select id="m-level">
+                    <option>Any level</option>
+                    <option>Primary</option>
+                    <option>Junior secondary</option>
+                    <option>Senior secondary</option>
+                </select>
+            </div>
+            <div class="field">
+                <label for="m-topic">Topic</label>
+                <select id="m-topic">
+                    <option>Any topic</option>
+                    <option>Science</option>
+                    <option>Technology</option>
+                    <option>Engineering</option>
+                    <option>Mathematics</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="form-actions">
+            <button class="btn btn-primary">Apply filters</button>
+            <button class="btn">Reset</button>
+        </div>
+    </div>
+
+    <div class="container">
+
+        <!-- plan list -->
+        <div class="management-list">
+            <h2>Plans at this school</h2>
+            <p class="hint">Showing <b>3</b> plans.</p>
+
+            <div class="plan-row">
+                <div>
+                    <p class="title">Rocket launcher - Grade 8</p>
+                    <p class="meta">Tue 10 Oct 2026 - 09:00-09:45 - Science - Junior secondary</p>
+                </div>
+                <div><span class="pill pill--ok">Reviewed</span></div>
+                <div class="actions">
+                    <button class="btn btn-small">View</button>
+                </div>
+            </div>
+
+            <div class="plan-row">
+                <div>
+                    <p class="title">Paper bridge - Grade 5</p>
+                    <p class="meta">Wed 11 Oct 2026 - 11:00-11:20 - Engineering - Primary</p>
+                </div>
+                <div><span class="pill pill--draft">Awaiting review</span></div>
+                <div class="actions">
+                    <button class="btn btn-small btn-primary">Review</button>
+                </div>
+            </div>
+
+            <div class="plan-row">
+                <div>
+                    <p class="title">Simple circuit torch - Grade 9</p>
+                    <p class="meta">Fri 13 Oct 2026 - 14:00-14:30 - Science - Senior secondary</p>
+                </div>
+                <div><span class="pill pill--draft">Awaiting review</span></div>
+                <div class="actions">
+                    <button class="btn btn-small btn-primary">Review</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- preview -->
+        <div class="management-preview">
+            <h2>Preview: Rocket launcher - Grade 8</h2>
+            <p class="meta">
+                <span class="pill pill--ok">Reviewed</span>
+                Tue 10 Oct 2026 - 09:00-09:45 - Junior secondary
+            </p>
+
+            <p><b>Facilitator:</b> M. Shikongo</p>
+            <p><b>Location:</b> Lab A</p>
+            <p><b>Duration:</b> 45 minutes</p>
+            <p><b>Group size:</b> 24 learners (broad count only)</p>
+
+            <h3>Age appropriateness</h3>
+            <p>Written for junior secondary and matches Grade 8 forces and air pressure.</p>
+
+            <h3>Inclusion and safety</h3>
+            <ul>
+                <li>Pre-cut fin templates offered.</li>
+                <li>Measuring may be in steps or centimetres.</li>
+                <li>Launch zone kept outdoors.</li>
+                <li>Bottles only cut by the facilitator.</li>
+            </ul>
+
+            <h3>Materials</h3>
+            <ul class="materials-list">
+                <li>6 plastic bottles</li>
+                <li>3 sheets of cardboard</li>
+                <li>1 roll masking tape</li>
+                <li>1 measuring tape</li>
+            </ul>
+
+            <div class="form-actions">
+                <button class="btn btn-primary">Print plan</button>
+                <button class="btn">Save as PDF</button>
+                <button class="btn">Mark as reviewed</button>
+            </div>
+        </div>
+
+        <!-- counts -->
+        <div class="management-summary">
+            <h2>Counts by level</h2>
+            <p class="hint">Broad categories only.</p>
+
+            <table class="kits">
+                <thead>
+                    <tr>
+                        <th>Level</th>
+                        <th>Plans</th>
+                        <th>Duration</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><th>Primary</th><td>1</td><td>20 min</td></tr>
+                    <tr><th>Junior secondary</th><td>1</td><td>45 min</td></tr>
+                    <tr><th>Senior secondary</th><td>1</td><td>30 min</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+</main>
+
+<footer class="site-footer">
+    <p>&copy; 2026 STEMMate Namibia</p>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>

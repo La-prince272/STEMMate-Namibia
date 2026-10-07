@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Custodian - STEMMate Namibia</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<a href="#main" class="skip-link">Skip to main content</a>
+
+<header class="heading">
+    <h1>STEMMate Namibia - Equipment Custodian</h1>
+</header>
+
+<div class="conn-banner conn-banner--offline" role="status">
+    <span>You are offline.</span>
+</div>
+
+<main id="main">
+
+    <div class="dashboard">
+        <div class="tile">
+            <p class="num">12</p>
+            <p class="lbl">Kits Registered</p>
+            <p class="sub">Across all rooms</p>
+        </div>
+        <div class="tile">
+            <p class="num">4</p>
+            <p class="lbl">Currently In Use</p>
+            <p class="sub">Checked out</p>
+        </div>
+        <div class="tile">
+            <p class="num">1</p>
+            <p class="lbl">Overdue Return</p>
+            <p class="sub">Action needed</p>
+        </div>
+    </div>
+
+    <div class="container">
+
+        <!-- kit list -->
+        <div class="kit-list">
+            <h2>Kits</h2>
+
+            <div class="kit-filter-grid">
+                <div class="field">
+                    <label for="kit-status">Status</label>
+                    <select id="kit-status">
+                        <option>All</option>
+                        <option>Available</option>
+                        <option>Reserved</option>
+                        <option>In use</option>
+                        <option>Overdue</option>
+                    </select>
+                </div>
+
+                <div class="field">
+                    <label for="kit-room">Room</label>
+                    <select id="kit-room">
+                        <option>All rooms</option>
+                        <option>Lab A</option>
+                        <option>Lab B</option>
+                        <option>Store room 1</option>
+                    </select>
+                </div>
+
+                <div class="field">
+                    <label for="kit-search">Search kit</label>
+                    <input type="text" id="kit-search" placeholder="e.g. Electricity kit">
+                </div>
+            </div>
+
+            <p class="hint">Showing <b>5</b> kits</p>
+
+            <div class="kit-table-wrap">
+                <table class="kits">
+                    <thead>
+                        <tr>
+                            <th>Kit</th>
+                            <th>Room</th>
+                            <th>Intended date</th>
+                            <th>Responsible person</th>
+                            <th>Status</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Electricity kit #2</td>
+                            <td>Lab A</td>
+                            <td>10 Oct 2026</td>
+                            <td>M. Shikongo</td>
+                            <td><span class="pill pill--ok">Available</span></td>
+                            <td><button class="btn btn-small">Reserve</button></td>
+                        </tr>
+                        <tr>
+                            <td>Water filtration kit #1</td>
+                            <td>Lab A</td>
+                            <td>12 Oct 2026</td>
+                            <td>J. Amupolo</td>
+                            <td><span class="pill pill--draft">Reserved</span></td>
+                            <td><button class="btn btn-small">Check out</button></td>
+                        </tr>
+                        <tr>
+                            <td>Rocket launcher kit #3</td>
+                            <td>Store room 1</td>
+                            <td>07 Oct 2026</td>
+                            <td>T. Nangolo</td>
+                            <td><span class="pill pill--warn">In use</span></td>
+                            <td><button class="btn btn-small">Return</button></td>
+                        </tr>
+                        <tr>
+                            <td>Microscope kit #1</td>
+                            <td>Lab B</td>
+                            <td>03 Oct 2026</td>
+                            <td>K. Uusiku</td>
+                            <td><span class="pill pill--danger">Overdue</span></td>
+                            <td><button class="btn btn-small btn-danger">Remind</button></td>
+                        </tr>
+                        <tr>
+                            <td>Electricity kit #2</td>
+                            <td>Lab A</td>
+                            <td>10 Oct 2026</td>
+                            <td>P. Kavezeri</td>
+                            <td><span class="pill pill--danger">Conflict</span></td>
+                            <td><button class="btn btn-small">Resolve</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- conflict warning -->
+            <div class="state state--error" style="margin-top:20px;">
+                <h3>Booking conflict: Electricity kit #2</h3>
+                <p>Two requests on <b>10 Oct 2026</b>. Only one group can use it.</p>
+
+                <div class="conflict-pair">
+                    <div class="card">
+                        <h3>Request A</h3>
+                        <p class="meta">M. Shikongo - 10 Oct 2026 - 09:00-11:00</p>
+                        <p class="meta">Solar car build - Grade 8</p>
+                        <button class="btn btn-primary">Assign to A</button>
+                    </div>
+
+                    <div class="card">
+                        <h3>Request B</h3>
+                        <p class="meta">P. Kavezeri - 10 Oct 2026 - 10:00-12:00</p>
+                        <p class="meta">Simple circuit torch - Grade 9</p>
+                        <button class="btn">Assign to B</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- reserve a kit -->
+        <div class="kit-booking">
+            <h2>Reserve a kit</h2>
+
+            <form>
+                <div class="field">
+                    <label for="book-kit">Kit</label>
+                    <select id="book-kit" required>
+                        <option value="">Select kit</option>
+                        <option>Electricity kit #2</option>
+                        <option>Water filtration kit #1</option>
+                        <option>Rocket launcher kit #3</option>
+                        <option>Microscope kit #1</option>
+                    </select>
+                </div>
+
+                <div class="field">
+                    <label for="book-date">Date</label>
+                    <input type="date" id="book-date" required>
+                </div>
+
+                <div class="field">
+                    <label for="book-time">Time slot</label>
+                    <select id="book-time" required>
+                        <option value="">Select time</option>
+                        <option>08:00 - 10:00</option>
+                        <option>10:00 - 12:00</option>
+                        <option>12:00 - 14:00</option>
+                        <option>14:00 - 16:00</option>
+                    </select>
+                </div>
+
+                <div class="field">
+                    <label for="book-person">Responsible person</label>
+                    <input type="text" id="book-person" placeholder="Adult who collects the kit" required>
+                    <p class="hint">Adults only - no learner names.</p>
+                </div>
+
+                <div class="field">
+                    <label for="book-purpose">Purpose</label>
+                    <input type="text" id="book-purpose" placeholder="e.g. Solar car build">
+                </div>
+
+                <div class="form-actions">
+                    <button type="submit" class="btn btn-primary">Request reservation</button>
+                    <button type="reset" class="btn">Clear</button>
+                </div>
+            </form>
+        </div>
+
+        <!-- return a kit -->
+        <div class="kit-return">
+            <h2>Record a return</h2>
+
+            <form>
+                <div class="field">
+                    <label for="return-kit">Kit</label>
+                    <select id="return-kit" required>
+                        <option value="">Select kit</option>
+                        <option>Rocket launcher kit #3</option>
+                        <option>Microscope kit #1</option>
+                    </select>
+                </div>
+
+                <div class="field">
+                    <label for="return-condition">Condition</label>
+                    <select id="return-condition" required>
+                        <option>Complete and undamaged</option>
+                        <option>Missing items</option>
+                        <option>Damaged</option>
+                    </select>
+                </div>
+
+                <div class="field">
+                    <label for="return-notes">Notes</label>
+                    <textarea id="return-notes" rows="3" placeholder="e.g. 2 clips missing"></textarea>
+                </div>
+
+                <div class="form-actions">
+                    <button type="submit" class="btn btn-primary">Save return</button>
+                    <button type="reset" class="btn">Clear</button>
+                </div>
+            </form>
+        </div>
+
+        <!-- queue -->
+        <div class="sync-queue" id="sync-queue">
+            <h2>Return queue</h2>
+            <div class="sync-list">
+                <!-- app.js fills this in -->
+            </div>
+            <div class="form-actions">
+                <button type="button" class="btn btn-primary" data-sync-all>Sync all now</button>
+            </div>
+        </div>
+
+    </div>
+</main>
+
+<footer class="site-footer">
+    <p>&copy; 2026 STEMMate Namibia</p>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>

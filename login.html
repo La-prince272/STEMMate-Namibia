@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Login - STEMMate Namibia</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- skip link (got this from a tutorial) -->
+<a href="#main" class="skip-link">Skip to main content</a>
+
+<header class="heading">
+    <h1>STEMMate Namibia</h1>
+</header>
+
+<main id="main" class="login-page">
+
+    <!-- LEFT SIDE -->
+    <div class="wallpaper">
+        <img src="STEM.jpeg" alt="STEMMate Namibia">
+
+        <div class="motivation-quotes">
+            <p>Learning thrives where access is open.</p>
+            <p>Resilience begins with preparation.</p>
+            <p>Knowledge shared is knowledge multiplied.</p>
+            <p>Inclusivity makes education stronger.</p>
+            <p>Even offline, learning continues.</p>
+            <p>Small steps build lasting impact.</p>
+            <p>Accessibility is the gateway to opportunity.</p>
+        </div>
+    </div>
+
+    <!-- RIGHT SIDE -->
+    <div class="login-panel">
+        <h2>Login</h2>
+        <p>Pick your role and sign in.</p>
+
+        <div class="role-picker">
+            <a href="#facilitator">Facilitator</a>
+            <a href="#custodian">Equipment custodian</a>
+            <a href="#coordinator">Coordinator</a>
+            <a href="#assistant">Volunteer assistant</a>
+            <a href="#management">School management</a>
+        </div>
+
+        <form id="facilitator" class="login-form" action="facilitator.html">
+            <h3>Facilitator</h3>
+            <label for="fac-user">Username</label>
+            <input type="text" id="fac-user" name="username" required>
+            <label for="fac-pass">Password</label>
+            <input type="password" id="fac-pass" name="password" required>
+            <button type="submit" class="btn btn-primary">Login</button>
+        </form>
+
+        <form id="custodian" class="login-form" action="custodian.html">
+            <h3>Equipment custodian</h3>
+            <label for="cus-user">Username</label>
+            <input type="text" id="cus-user" name="username" required>
+            <label for="cus-pass">Password</label>
+            <input type="password" id="cus-pass" name="password" required>
+            <button type="submit" class="btn btn-primary">Login</button>
+        </form>
+
+        <form id="coordinator" class="login-form" action="coordinator.html">
+            <h3>Coordinator</h3>
+            <label for="co-user">Username</label>
+            <input type="text" id="co-user" name="username" required>
+            <label for="co-pass">Password</label>
+            <input type="password" id="co-pass" name="password" required>
+            <button type="submit" class="btn btn-primary">Login</button>
+        </form>
+
+        <form id="assistant" class="login-form" action="assistant.html">
+            <h3>Volunteer assistant</h3>
+            <label for="as-user">Username</label>
+            <input type="text" id="as-user" name="username" required>
+            <label for="as-pass">Password</label>
+            <input type="password" id="as-pass" name="password" required>
+            <button type="submit" class="btn btn-primary">Login</button>
+        </form>
+
+        <form id="management" class="login-form" action="management.html">
+            <h3>School management</h3>
+            <label for="mg-user">Username</label>
+            <input type="text" id="mg-user" name="username" required>
+            <label for="mg-pass">Password</label>
+            <input type="password" id="mg-pass" name="password" required>
+            <button type="submit" class="btn btn-primary">Login</button>
+        </form>
+
+        <p class="hint"><a href="#">Forgot password?</a></p>
+
+        <!-- sign up is collapsed so it does not clutter the page -->
+        <details class="signup-block">
+            <summary>Create a new account</summary>
+
+            <form action="#">
+                <label for="su-fname">First name</label>
+                <input type="text" id="su-fname" name="fname" required>
+
+                <label for="su-lname">Last name</label>
+                <input type="text" id="su-lname" name="lname" required>
+
+                <label for="su-email">Email</label>
+                <input type="email" id="su-email" name="email" required>
+
+                <label for="su-role">Role</label>
+                <select id="su-role" name="role" required>
+                    <option value="">Select role</option>
+                    <option>Facilitator</option>
+                    <option>Equipment custodian</option>
+                    <option>Coordinator</option>
+                    <option>Volunteer assistant</option>
+                    <option>School management</option>
+                </select>
+
+                <label for="su-pass">Password</label>
+                <input type="password" id="su-pass" name="pwd" required>
+
+                <label for="su-pass2">Confirm password</label>
+                <input type="password" id="su-pass2" name="pwd2" required>
+
+                <button type="submit" class="btn btn-primary">Sign up</button>
+            </form>
+        </details>
+    </div>
+</main>
+
+<footer class="site-footer">
+    <p>&copy; 2026 STEMMate Namibia</p>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Coordinator - STEMMate Namibia</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<a href="#main" class="skip-link">Skip to main content</a>
+
+<header class="heading">
+    <h1>STEMMate Namibia - Outreach Coordinator</h1>
+</header>
+
+<div class="conn-banner conn-banner--offline" role="status">
+    <span>You are offline.</span>
+</div>
+
+<main id="main">
+
+    <!-- privacy notice -->
+    <div class="privacy-notice">
+        <h2>Privacy notice</h2>
+        <p>
+            This dashboard shows <b>counts only</b>. We do not store learner names,
+            photos or records. Participation is shown by broad category
+            (Primary, Junior secondary, Senior secondary), never by learner.
+        </p>
+    </div>
+
+    <div class="dashboard">
+        <div class="tile">
+            <p class="num">18</p>
+            <p class="lbl">Plans This Month</p>
+            <p class="sub">Across 6 facilitators</p>
+        </div>
+        <div class="tile">
+            <p class="num">14</p>
+            <p class="lbl">Synced</p>
+            <p class="sub">Ready for review</p>
+        </div>
+        <div class="tile">
+            <p class="num">4</p>
+            <p class="lbl">Pending Sync</p>
+            <p class="sub">Not visible team-wide</p>
+        </div>
+    </div>
+
+    <div class="container">
+
+        <!-- coverage -->
+        <div class="coverage">
+            <h2>Coverage by topic and level</h2>
+            <p class="hint">Counts of session plans by topic and level.</p>
+
+            <table class="kits">
+                <thead>
+                    <tr>
+                        <th>Topic</th>
+                        <th>Primary</th>
+                        <th>Junior secondary</th>
+                        <th>Senior secondary</th>
+                        <th>Total</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th>Science</th>
+                        <td>3</td><td>4</td><td>2</td><td><b>9</b></td>
+                    </tr>
+                    <tr>
+                        <th>Technology</th>
+                        <td>1</td><td>2</td><td>1</td><td><b>4</b></td>
+                    </tr>
+                    <tr>
+                        <th>Engineering</th>
+                        <td>2</td><td>1</td><td>0</td><td><b>3</b></td>
+                    </tr>
+                    <tr>
+                        <th>Mathematics</th>
+                        <td>1</td><td>1</td><td>0</td><td><b>2</b></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <p class="hint" style="margin-top:12px;">
+                <b>Gap:</b> no senior secondary Engineering or Maths this month.
+            </p>
+        </div>
+
+        <!-- recent plans -->
+        <div class="plan-summary">
+            <h2>Recent session plans</h2>
+            <p class="hint">Summary only. Learners are never listed.</p>
+
+            <div class="plan-row">
+                <div>
+                    <p class="title">Rocket launcher - Grade 8</p>
+                    <p class="meta">M. Shikongo - 10 Oct 2026 - Science</p>
+                </div>
+                <div><span class="pill pill--ok">Synced</span></div>
+                <div class="meta">Junior secondary</div>
+            </div>
+
+            <div class="plan-row">
+                <div>
+                    <p class="title">Paper bridge - Grade 5</p>
+                    <p class="meta">J. Amupolo - 12 Oct 2026 - Engineering</p>
+                </div>
+                <div><span class="pill pill--ok">Synced</span></div>
+                <div class="meta">Primary</div>
+            </div>
+
+            <div class="plan-row">
+                <div>
+                    <p class="title">Simple circuit torch - Grade 9</p>
+                    <p class="meta">T. Nangolo - 14 Oct 2026 - Science</p>
+                </div>
+                <div><span class="pill pill--warn">Pending sync</span></div>
+                <div class="meta">Senior secondary</div>
+            </div>
+
+            <div class="plan-row">
+                <div>
+                    <p class="title">Water filtration - Grade 8</p>
+                    <p class="meta">K. Uusiku - 27 Oct 2026 - Science</p>
+                </div>
+                <div><span class="pill pill--warn">Pending sync</span></div>
+                <div class="meta">Junior secondary</div>
+            </div>
+
+            <div class="form-actions">
+                <button class="btn">Export summary</button>
+                <button class="btn">Copy counts</button>
+            </div>
+            <p class="hint">Exports contain counts only.</p>
+        </div>
+
+        <!-- facilitator directory -->
+        <div class="facilitator-directory">
+            <h2>Facilitator directory</h2>
+
+            <table class="kits">
+                <thead>
+                    <tr>
+                        <th>Facilitator</th>
+                        <th>Region</th>
+                        <th>Plans</th>
+                        <th>Last sync</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>M. Shikongo</td><td>Khomas</td><td>5</td>
+                        <td>06 Oct 2026, 18:42</td>
+                        <td><span class="pill pill--ok">Synced</span></td>
+                    </tr>
+                    <tr>
+                        <td>J. Amupolo</td><td>Khomas</td><td>4</td>
+                        <td>06 Oct 2026, 18:38</td>
+                        <td><span class="pill pill--ok">Synced</span></td>
+                    </tr>
+                    <tr>
+                        <td>T. Nangolo</td><td>Erongo</td><td>3</td>
+                        <td>04 Oct 2026, 09:15</td>
+                        <td><span class="pill pill--warn">2 pending</span></td>
+                    </tr>
+                    <tr>
+                        <td>K. Uusiku</td><td>Oshana</td><td>4</td>
+                        <td>02 Oct 2026, 16:20</td>
+                        <td><span class="pill pill--warn">2 pending</span></td>
+                    </tr>
+                    <tr>
+                        <td>P. Kavezeri</td><td>Otjozondjupa</td><td>2</td>
+                        <td>Never</td>
+                        <td><span class="pill pill--danger">Not synced</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- review checklist -->
+        <div class="review-checklist">
+            <h2>Plan review checklist</h2>
+
+            <ul class="checklist">
+                <li><span class="pill pill--ok">18/18</span> Plans include safety notes.</li>
+                <li><span class="pill pill--ok">18/18</span> Plans include an inclusion prompt.</li>
+                <li><span class="pill pill--warn">15/18</span> Materials match local stock.</li>
+                <li><span class="pill pill--danger">12/18</span> Duration fits the time slot.</li>
+            </ul>
+        </div>
+
+        <!-- sync health -->
+        <div class="sync-queue" id="sync-queue">
+            <h2>Team sync health</h2>
+            <div class="sync-list">
+                <!-- app.js fills this in -->
+            </div>
+            <div class="form-actions">
+                <button class="btn btn-primary" data-sync-all>Refresh</button>
+            </div>
+        </div>
+
+    </div>
+</main>
+
+<footer class="site-footer">
+    <p>&copy; 2026 STEMMate Namibia</p>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>
