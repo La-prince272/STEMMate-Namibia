@@ -1,0 +1,400 @@
+/* =========================================
+   STEMMate Namibia - School Management
+   Theme: Navy and blue
+   ========================================= */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f0f4fa;
+    color: #263449;
+    line-height: 1.6;
+}
+
+h1, h2, h3 {
+    font-family: Georgia, "Times New Roman", serif;
+}
+
+h2 {
+    margin-top: 0;
+    padding-bottom: 10px;
+    color: #234b83;
+    border-bottom: 2px solid #dce6f3;
+}
+
+h3 {
+    color: #234b83;
+}
+
+.skip-link {
+    position: absolute;
+    left: -9999px;
+    top: 10px;
+    z-index: 100;
+    padding: 12px;
+    color: white;
+    background-color: #142e52;
+}
+
+.skip-link:focus {
+    left: 10px;
+}
+
+a:focus, button:focus, input:focus,
+select:focus, textarea:focus {
+    outline: 3px solid #e4a83c;
+    outline-offset: 2px;
+}
+
+/* HEADER */
+.heading {
+    padding: 35px 20px;
+    text-align: center;
+    color: white;
+    background: linear-gradient(120deg, #142e52, #2864a6);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.heading h1 {
+    margin: 0;
+    font-size: 30px;
+}
+
+/* CONNECTION STATUS */
+.conn-banner {
+    padding: 12px 25px;
+    font-weight: bold;
+}
+
+.conn-banner--offline {
+    color: #86520a;
+    background-color: #fff1d6;
+}
+
+.conn-banner--online {
+    color: #17633b;
+    background-color: #d9f7e5;
+}
+
+/* MAIN LAYOUT */
+main {
+    max-width: 1250px;
+    margin: auto;
+    padding: 25px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+/* DASHBOARD TILES */
+.dashboard {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+    max-width: 1250px;
+    margin: 25px auto 0;
+    padding: 0 25px;
+}
+
+.tile {
+    padding: 25px;
+    text-align: center;
+    color: white;
+    background: linear-gradient(135deg, #1b4275, #3476b9);
+    border-radius: 14px;
+    border-bottom: 4px solid #e7b85d;
+    box-shadow: 0 5px 14px rgba(27, 66, 117, 0.15);
+}
+
+.tile .num {
+    margin: 0;
+    font-size: 36px;
+    font-weight: bold;
+}
+
+.tile .lbl {
+    margin: 5px 0;
+    font-weight: bold;
+}
+
+.tile .sub {
+    margin: 0;
+    color: #dceaff;
+    font-size: 13px;
+}
+
+/* CONTENT PANELS */
+.review-checklist,
+.management-list,
+.management-preview,
+.management-summary,
+.sync-queue {
+    padding: 25px;
+    background-color: white;
+    border: 1px solid #dce5f0;
+    border-radius: 14px;
+    box-shadow: 0 4px 15px rgba(30, 55, 90, 0.07);
+}
+
+/* REVIEW CHECKLIST */
+.checklist,
+.checklist--interactive {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.checklist li,
+.checklist--interactive li {
+    padding: 14px;
+    margin-bottom: 10px;
+    background-color: #f7faff;
+    border: 1px solid #dce5f0;
+    border-radius: 9px;
+}
+
+.checklist li {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.checklist--interactive label {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    cursor: pointer;
+}
+
+.checklist input[type="checkbox"],
+.checklist--interactive input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    accent-color: #2864a6;
+}
+
+/* MANAGEMENT SUMMARY CARDS */
+.management-summary .card,
+.management-list .card,
+.management-preview .card {
+    padding: 20px;
+    margin-bottom: 15px;
+    background-color: #f7faff;
+    border: 1px solid #dce5f0;
+    border-left: 4px solid #3476b9;
+    border-radius: 10px;
+}
+
+.card h3 {
+    margin-top: 0;
+}
+
+/* TABLE */
+.kit-table-wrap {
+    width: 100%;
+    overflow-x: auto;
+    margin-top: 15px;
+    border: 1px solid #dce5f0;
+    border-radius: 10px;
+}
+
+table.kits {
+    width: 100%;
+    min-width: 600px;
+    border-collapse: collapse;
+    background-color: white;
+}
+
+table.kits th,
+table.kits td {
+    padding: 14px 12px;
+    text-align: left;
+    border-bottom: 1px solid #e6edf5;
+}
+
+table.kits thead th {
+    color: white;
+    background-color: #234b83;
+    font-size: 13px;
+}
+
+table.kits tbody tr:nth-child(even) {
+    background-color: #f7faff;
+}
+
+table.kits tbody tr:hover {
+    background-color: #eaf2fc;
+}
+
+/* FORM FIELDS */
+.field {
+    margin-bottom: 15px;
+}
+
+.field label {
+    display: block;
+    margin-bottom: 7px;
+    color: #234b83;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="date"],
+input[type="email"],
+input[type="password"],
+select,
+textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccd9e9;
+    border-radius: 8px;
+    background-color: #fbfdff;
+    color: #263449;
+    font-size: 14px;
+}
+
+textarea {
+    min-height: 90px;
+    resize: vertical;
+}
+
+input:focus, select:focus, textarea:focus {
+    border-color: #3476b9;
+}
+
+/* BUTTONS */
+.form-actions,
+.actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.btn {
+    padding: 10px 16px;
+    border: 1px solid #3476b9;
+    border-radius: 8px;
+    color: #234b83;
+    background-color: white;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.btn:hover {
+    background-color: #eaf2fc;
+    transform: translateY(-2px);
+}
+
+.btn-primary {
+    color: white;
+    background-color: #2864a6;
+    border-color: #2864a6;
+}
+
+.btn-primary:hover {
+    background-color: #194779;
+}
+
+.btn-danger {
+    color: white;
+    background-color: #b83232;
+    border-color: #b83232;
+}
+
+.btn-danger:hover {
+    background-color: #8f2525;
+}
+
+/* STATUS PILLS */
+.pill {
+    display: inline-block;
+    padding: 5px 12px;
+    border-radius: 30px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.pill--ok {
+    color: #17633b;
+    background-color: #d9f7e5;
+}
+
+.pill--warn {
+    color: #86520a;
+    background-color: #fff1d6;
+}
+
+.pill--danger {
+    color: #982b2b;
+    background-color: #ffe0e0;
+}
+
+.pill--draft {
+    color: #285b91;
+    background-color: #e0edff;
+}
+
+/* SYNC QUEUE */
+.sync-item {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    padding: 15px;
+    margin-bottom: 10px;
+    background-color: #f7faff;
+    border: 1px solid #dce5f0;
+    border-radius: 9px;
+}
+
+.sync-icon {
+    font-size: 22px;
+}
+
+/* GENERAL TEXT */
+.hint,
+.meta {
+    color: #718096;
+    font-size: 13px;
+}
+
+/* FOOTER */
+.site-footer {
+    margin-top: 40px;
+    padding: 22px;
+    text-align: center;
+    color: white;
+    background-color: #142e52;
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 800px) {
+    .dashboard {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 650px) {
+    .dashboard {
+        grid-template-columns: 1fr;
+        padding: 0 15px;
+    }
+
+    main {
+        padding: 15px;
+    }
+
+    .heading h1 {
+        font-size: 23px;
+    }
+}
